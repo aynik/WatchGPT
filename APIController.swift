@@ -10,13 +10,10 @@ extension Array where Element == Message {
 }
 
 class APIController: @unchecked Sendable {
-  
   private var historyList = [Message]()
   private let urlSession = URLSession.shared
+  private let apiBaseUrl = Bundle.main.object(forInfoDictionaryKey: "ApiBaseUrl")!
   private var urlRequest: URLRequest {
-    guard let apiBaseUrl = Bundle.main.object(forInfoDictionaryKey: "ApiBaseUrl") as? String else {
-        fatalError("ApiBaseUrl not found in Info.plist")
-    }
     let url = historyList.count > 0 ?
     URL(string: "\(apiBaseUrl)/chat-continue") :
     URL(string: "\(apiBaseUrl)/chat")
