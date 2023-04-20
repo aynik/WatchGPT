@@ -2,6 +2,7 @@ import SwiftUI
 
 struct ContentView: View {
   @ObservedObject var vm: ViewModel
+  @ObservedObject var synthesizer = SpeechSynthesizer.shared
   @FocusState var isTextFieldFocused: Bool
   @State private var showSettings: Bool = false
   
@@ -40,7 +41,7 @@ struct ContentView: View {
   
   private func speakButton() -> some View {
     Button(action: { if let lastMessageText = vm.messages.last?.responseText {
-      Synthesizer.shared.speak(language: vm.speakingLanguage, text: lastMessageText)
+      synthesizer.speak(language: vm.speakingLanguage, text: lastMessageText)
     }}) {
       Text("Speak")
         .foregroundColor(.green)

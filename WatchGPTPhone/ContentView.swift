@@ -3,6 +3,7 @@ import SwiftUI
 struct ContentView: View {
   @Environment(\.colorScheme) var colorScheme
   @ObservedObject var vm: ViewModel
+  @ObservedObject var synthesizer = SpeechSynthesizer.shared
   @FocusState var isTextFieldFocused: Bool
   @State var inputMessage = ""
   @State var isRecording = false
@@ -37,7 +38,7 @@ struct ContentView: View {
   }
   
   // Separate view components for better readability
-  internal var chatListView: some View {
+  internal func chatListView() -> some View {
     ScrollViewReader { proxy in
       VStack(spacing: 0) {
         messageList
@@ -74,6 +75,7 @@ struct ContentView: View {
       
       TextField("Send message", text: $inputMessage, axis: .vertical)
         .padding([.vertical, .horizontal], 10)
+        .padding(.trailing, 30)
         .overlay(RoundedRectangle(cornerRadius: 10.0)
           .strokeBorder(.gray.opacity(0.3), style: StrokeStyle(lineWidth: 1.0)))
         .showClearButton($inputMessage)
@@ -87,36 +89,37 @@ struct ContentView: View {
   }
   
   internal func recordButton() -> some View {
-    if Synthesizer.shared.isSpeaking {
-      return AnyView(Button(action: {
-        Synthesizer.shared.stopSpeaking()
-        vm.isSpeaking = false
-      }) {
-        Image(systemName: "stop.circle.fill")
-          .font(.system(size: 30))
-          .foregroundColor(.red)
-      })
-    } else {
-      return AnyView(Button(action: {
+    return Button(action: {
+      if synthesizer.isSpeaking {
+        synthesizer.stopSpeaking()
+        vm.stopSpeaking = true
+      } else {
         if isRecording {
           stopRecording()
         } else {
           startRecording()
         }
-      }) {
-        Image(systemName: isRecording ? "stop.circle.fill" : "mic.circle.fill")
+      }
+    }) {
+      if isRecording || synthesizer.isSpeaking {
+        Image(systemName: "stop.circle.fill")
           .font(.system(size: 30))
-      }.disabled(vm.isInteractingWithChatGPT))
-    }
+          .foregroundColor(.red)
+      } else {
+        Image(systemName: "mic.circle.fill")
+          .font(.system(size: 30))
+          .foregroundColor(.blue)
+      }
+    }.disabled(vm.isInteractingWithChatGPT)
   }
   
   
   internal func sendButton(proxy: ScrollViewProxy) -> some View {
     Button {
-      stopRecording()
-      isTextFieldFocused = false
-      scrollToBottom(proxy: proxy)
       Task { @MainActor in
+        stopRecording()
+        isTextFieldFocused = false
+        scrollToBottom(proxy: proxy)
         let text = inputMessage
         self.inputMessage = ""
         await vm.send(text: text)
@@ -130,7 +133,7 @@ struct ContentView: View {
   }
   
   var body: some View {
-    chatListView
+    chatListView()
       .navigationTitle("WatchGPT")
       .navigationBarTitleDisplayMode(NavigationBarItem.TitleDisplayMode.inline)
       .toolbar {

@@ -8,11 +8,11 @@ struct SettingsView: View {
       Form {
         modelPicker()
         #if os(iOS)
-        baseUrlInput()
         listeningLanguagePicker()
         #endif
         speakingToggle()
         speakingLanguagePicker()
+        baseUrlInput()
       }
       .navigationBarTitle("Settings")
       .padding(.top)
@@ -56,7 +56,6 @@ struct SettingsView: View {
   // URL input component
   private func baseUrlInput() -> some View {
     TextField("Base URL", text: $vm.baseUrl)
-      .textCase(.lowercase)
       .autocorrectionDisabled()
   }
 }

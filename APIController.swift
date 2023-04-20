@@ -1,6 +1,7 @@
 import Foundation
 import SwiftUI
 
+
 struct Message {
   let role: String
   let content: String

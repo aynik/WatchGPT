@@ -59,7 +59,7 @@ struct MessageRowView: View {
           Text("Copy")
         }
         Button(action: {
-          Synthesizer.shared.speak(language: vm.speakingLanguage, text: text)
+          vm.synthesizer.speak(language: vm.speakingLanguage, text: text)
         }) {
           Text("Speak")
         }
