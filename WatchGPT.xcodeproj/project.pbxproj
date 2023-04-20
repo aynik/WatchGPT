@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6E17D2D729EFC5B5006089ED /* GptModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E17D2D629EFC5B5006089ED /* GptModel.swift */; };
+		6E17D2D829EFC5B5006089ED /* GptModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E17D2D629EFC5B5006089ED /* GptModel.swift */; };
+		6E39D0A029EFB2DA0087BB7F /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E39D09F29EFB2DA0087BB7F /* SettingsView.swift */; };
+		6E39D0A129EFB2DA0087BB7F /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E39D09F29EFB2DA0087BB7F /* SettingsView.swift */; };
 		6E3D4FE129EBB8B40014201D /* APIController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E3D4FD929EBB78A0014201D /* APIController.swift */; };
 		6E3D4FE229EBB8B40014201D /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E3D4FD529EBB7500014201D /* ViewModel.swift */; };
 		6E3D4FE629EBC1440014201D /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E3D4FDD29EBB7CD0014201D /* ContentView.swift */; };
@@ -15,35 +19,36 @@
 		6E3DED1B29ECCF590088B64A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6E3DED1A29ECCF590088B64A /* Assets.xcassets */; };
 		6E9CC2A529EEB53B00D48F01 /* APIController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E3D4FD929EBB78A0014201D /* APIController.swift */; };
 		6E9CC2A729EEB55E00D48F01 /* MessageRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E9CC2A629EEB55E00D48F01 /* MessageRowView.swift */; };
-		6E9CC2AD29EEB79100D48F01 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E9CC2AC29EEB79100D48F01 /* SettingsView.swift */; };
 		6E9CC2AE29EEB7A500D48F01 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E3D4FD529EBB7500014201D /* ViewModel.swift */; };
 		6E9CC2B029EEB86800D48F01 /* SpeechLanguage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E9CC2AF29EEB86800D48F01 /* SpeechLanguage.swift */; };
 		6E9CC2B129EEB8B700D48F01 /* SpeechLanguage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E9CC2AF29EEB86800D48F01 /* SpeechLanguage.swift */; };
-		6E9CC2BA29EECA7800D48F01 /* Secrets.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 6E9CC2B929EECA7800D48F01 /* Secrets.xcconfig */; };
-		6E9CC2BB29EECC2D00D48F01 /* Secrets.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 6E9CC2B929EECA7800D48F01 /* Secrets.xcconfig */; };
-		6E9CC2C129EEDFC200D48F01 /* ViewModelExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E9CC2C029EEDFC200D48F01 /* ViewModelExtension.swift */; };
 		6E9CC2C729EEE6ED00D48F01 /* AppMain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E9CC2C629EEE6ED00D48F01 /* AppMain.swift */; };
 		6E9CC2C829EEE6ED00D48F01 /* AppMain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E9CC2C629EEE6ED00D48F01 /* AppMain.swift */; };
-		6E9CC2CD29EEE89F00D48F01 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E9CC2AC29EEB79100D48F01 /* SettingsView.swift */; };
+		6EBE017929F00BC2006D1788 /* Synthesizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EBE017829F00BC2006D1788 /* Synthesizer.swift */; };
+		6EBE017A29F00BC2006D1788 /* Synthesizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EBE017829F00BC2006D1788 /* Synthesizer.swift */; };
+		6EBE017D29F00C39006D1788 /* SpeechRecognizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EBE017B29F00C39006D1788 /* SpeechRecognizer.swift */; };
+		6EBE018129F040F1006D1788 /* TextFieldClearButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EBE018029F040F1006D1788 /* TextFieldClearButton.swift */; };
 		AD7E7E4A253D9F5A00E684A1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AD7E7E49253D9F5A00E684A1 /* Assets.xcassets */; };
 		AD7E7E5A253D9F5B00E684A1 /* ComplicationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD7E7E59253D9F5B00E684A1 /* ComplicationController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		6E17D2D629EFC5B5006089ED /* GptModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GptModel.swift; sourceTree = "<group>"; };
+		6E39D09F29EFB2DA0087BB7F /* SettingsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		6E3D4FD529EBB7500014201D /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
 		6E3D4FD929EBB78A0014201D /* APIController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIController.swift; sourceTree = "<group>"; };
 		6E3D4FDD29EBB7CD0014201D /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		6E3D4FDF29EBB7F90014201D /* MessageRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageRowView.swift; sourceTree = "<group>"; };
-		6E3DED1429ECCF580088B64A /* WatchGPT.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WatchGPT.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		6E3DED1429ECCF580088B64A /* WatchGPTPhone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WatchGPTPhone.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6E3DED1829ECCF580088B64A /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		6E3DED1A29ECCF590088B64A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6E9CC2A629EEB55E00D48F01 /* MessageRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageRowView.swift; sourceTree = "<group>"; };
-		6E9CC2AC29EEB79100D48F01 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SettingsView.swift; path = WatchGPT/SettingsView.swift; sourceTree = "<group>"; };
 		6E9CC2AF29EEB86800D48F01 /* SpeechLanguage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeechLanguage.swift; sourceTree = "<group>"; };
 		6E9CC2B229EEBA6F00D48F01 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		6E9CC2B929EECA7800D48F01 /* Secrets.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Secrets.xcconfig; sourceTree = "<group>"; };
-		6E9CC2C029EEDFC200D48F01 /* ViewModelExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelExtension.swift; sourceTree = "<group>"; };
 		6E9CC2C629EEE6ED00D48F01 /* AppMain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppMain.swift; sourceTree = "<group>"; };
+		6EBE017829F00BC2006D1788 /* Synthesizer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Synthesizer.swift; sourceTree = "<group>"; };
+		6EBE017B29F00C39006D1788 /* SpeechRecognizer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeechRecognizer.swift; sourceTree = "<group>"; };
+		6EBE018029F040F1006D1788 /* TextFieldClearButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldClearButton.swift; sourceTree = "<group>"; };
 		AD7E7E47253D9F5500E684A1 /* WatchGPTWatch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WatchGPTWatch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AD7E7E49253D9F5A00E684A1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AD7E7E4B253D9F5A00E684A1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -73,7 +78,7 @@
 			children = (
 				6E9CC2A329EEB22200D48F01 /* Shared */,
 				AD7E7E48253D9F5600E684A1 /* WatchGPTWatch */,
-				6E3DED1529ECCF580088B64A /* WatchGPT */,
+				6E3DED1529ECCF580088B64A /* WatchGPTPhone */,
 				18D775BE22AD944300AE281E /* Products */,
 			);
 			indentWidth = 2;
@@ -84,31 +89,34 @@
 			isa = PBXGroup;
 			children = (
 				AD7E7E47253D9F5500E684A1 /* WatchGPTWatch.app */,
-				6E3DED1429ECCF580088B64A /* WatchGPT.app */,
+				6E3DED1429ECCF580088B64A /* WatchGPTPhone.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		6E3DED1529ECCF580088B64A /* WatchGPT */ = {
+		6E3DED1529ECCF580088B64A /* WatchGPTPhone */ = {
 			isa = PBXGroup;
 			children = (
 				6E3DED1829ECCF580088B64A /* ContentView.swift */,
 				6E9CC2A629EEB55E00D48F01 /* MessageRowView.swift */,
+				6EBE017B29F00C39006D1788 /* SpeechRecognizer.swift */,
+				6EBE018029F040F1006D1788 /* TextFieldClearButton.swift */,
 				6E3DED1A29ECCF590088B64A /* Assets.xcassets */,
 				6E9CC2B229EEBA6F00D48F01 /* Info.plist */,
 			);
-			path = WatchGPT;
+			path = WatchGPTPhone;
 			sourceTree = "<group>";
 		};
 		6E9CC2A329EEB22200D48F01 /* Shared */ = {
 			isa = PBXGroup;
 			children = (
-				6E9CC2B929EECA7800D48F01 /* Secrets.xcconfig */,
 				6E9CC2C629EEE6ED00D48F01 /* AppMain.swift */,
 				6E3D4FD929EBB78A0014201D /* APIController.swift */,
 				6E3D4FD529EBB7500014201D /* ViewModel.swift */,
+				6E39D09F29EFB2DA0087BB7F /* SettingsView.swift */,
+				6E17D2D629EFC5B5006089ED /* GptModel.swift */,
 				6E9CC2AF29EEB86800D48F01 /* SpeechLanguage.swift */,
-				6E9CC2AC29EEB79100D48F01 /* SettingsView.swift */,
+				6EBE017829F00BC2006D1788 /* Synthesizer.swift */,
 			);
 			name = Shared;
 			sourceTree = "<group>";
@@ -119,7 +127,6 @@
 				6E3D4FDD29EBB7CD0014201D /* ContentView.swift */,
 				6E3D4FDF29EBB7F90014201D /* MessageRowView.swift */,
 				AD7E7E59253D9F5B00E684A1 /* ComplicationController.swift */,
-				6E9CC2C029EEDFC200D48F01 /* ViewModelExtension.swift */,
 				AD7E7E49253D9F5A00E684A1 /* Assets.xcassets */,
 				AD7E7E4B253D9F5A00E684A1 /* Info.plist */,
 			);
@@ -129,9 +136,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		6E3DED1329ECCF580088B64A /* WatchGPT */ = {
+		6E3DED1329ECCF580088B64A /* WatchGPTPhone */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 6E3DED2129ECCF590088B64A /* Build configuration list for PBXNativeTarget "WatchGPT" */;
+			buildConfigurationList = 6E3DED2129ECCF590088B64A /* Build configuration list for PBXNativeTarget "WatchGPTPhone" */;
 			buildPhases = (
 				6E3DED1029ECCF580088B64A /* Sources */,
 				6E3DED1129ECCF580088B64A /* Frameworks */,
@@ -141,9 +148,9 @@
 			);
 			dependencies = (
 			);
-			name = WatchGPT;
+			name = WatchGPTPhone;
 			productName = WatchGPT;
-			productReference = 6E3DED1429ECCF580088B64A /* WatchGPT.app */;
+			productReference = 6E3DED1429ECCF580088B64A /* WatchGPTPhone.app */;
 			productType = "com.apple.product-type.application";
 		};
 		AD7E7E46253D9F5500E684A1 /* WatchGPTWatch */ = {
@@ -195,7 +202,7 @@
 			projectRoot = "";
 			targets = (
 				AD7E7E46253D9F5500E684A1 /* WatchGPTWatch */,
-				6E3DED1329ECCF580088B64A /* WatchGPT */,
+				6E3DED1329ECCF580088B64A /* WatchGPTPhone */,
 			);
 		};
 /* End PBXProject section */
@@ -206,7 +213,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				6E3DED1B29ECCF590088B64A /* Assets.xcassets in Resources */,
-				6E9CC2BA29EECA7800D48F01 /* Secrets.xcconfig in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -215,7 +221,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				AD7E7E4A253D9F5A00E684A1 /* Assets.xcassets in Resources */,
-				6E9CC2BB29EECC2D00D48F01 /* Secrets.xcconfig in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -227,11 +232,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				6E3DED1929ECCF580088B64A /* ContentView.swift in Sources */,
+				6E39D0A129EFB2DA0087BB7F /* SettingsView.swift in Sources */,
+				6EBE017A29F00BC2006D1788 /* Synthesizer.swift in Sources */,
 				6E9CC2A529EEB53B00D48F01 /* APIController.swift in Sources */,
-				6E9CC2AD29EEB79100D48F01 /* SettingsView.swift in Sources */,
 				6E9CC2C829EEE6ED00D48F01 /* AppMain.swift in Sources */,
+				6EBE017D29F00C39006D1788 /* SpeechRecognizer.swift in Sources */,
 				6E9CC2A729EEB55E00D48F01 /* MessageRowView.swift in Sources */,
+				6E17D2D829EFC5B5006089ED /* GptModel.swift in Sources */,
 				6E9CC2B029EEB86800D48F01 /* SpeechLanguage.swift in Sources */,
+				6EBE018129F040F1006D1788 /* TextFieldClearButton.swift in Sources */,
 				6E9CC2AE29EEB7A500D48F01 /* ViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -241,14 +250,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				6E9CC2B129EEB8B700D48F01 /* SpeechLanguage.swift in Sources */,
+				6E17D2D729EFC5B5006089ED /* GptModel.swift in Sources */,
 				6E3D4FE829EBC17D0014201D /* MessageRowView.swift in Sources */,
-				6E9CC2C129EEDFC200D48F01 /* ViewModelExtension.swift in Sources */,
 				6E3D4FE629EBC1440014201D /* ContentView.swift in Sources */,
 				6E9CC2C729EEE6ED00D48F01 /* AppMain.swift in Sources */,
+				6EBE017929F00BC2006D1788 /* Synthesizer.swift in Sources */,
+				6E39D0A029EFB2DA0087BB7F /* SettingsView.swift in Sources */,
 				AD7E7E5A253D9F5B00E684A1 /* ComplicationController.swift in Sources */,
 				6E3D4FE229EBB8B40014201D /* ViewModel.swift in Sources */,
 				6E3D4FE129EBB8B40014201D /* APIController.swift in Sources */,
-				6E9CC2CD29EEE89F00D48F01 /* SettingsView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -373,7 +383,6 @@
 		};
 		6E3DED1F29ECCF590088B64A /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 6E9CC2B929EECA7800D48F01 /* Secrets.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -381,24 +390,26 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "";
-				DEVELOPMENT_TEAM = 64U5F24Q5N;
+				DEVELOPMENT_TEAM = JC425FUS22;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "$(SRCROOT)/WatchGPT/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/WatchGPTPhone/Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = WatchGPT;
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "The app will use the phone microphone to record your voice.";
+				INFOPLIST_KEY_NSSpeechRecognitionUsageDescription = "The app will use the function to recognize your talk.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = io.github.aynik.WatchGPT;
+				PRODUCT_BUNDLE_IDENTIFIER = com.aynik.WatchGPT;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -408,7 +419,6 @@
 		};
 		6E3DED2029ECCF590088B64A /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 6E9CC2B929EECA7800D48F01 /* Secrets.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -416,24 +426,26 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "";
-				DEVELOPMENT_TEAM = 64U5F24Q5N;
+				DEVELOPMENT_TEAM = JC425FUS22;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "$(SRCROOT)/WatchGPT/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/WatchGPTPhone/Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = WatchGPT;
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "The app will use the phone microphone to record your voice.";
+				INFOPLIST_KEY_NSSpeechRecognitionUsageDescription = "The app will use the function to recognize your talk.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = io.github.aynik.WatchGPT;
+				PRODUCT_BUNDLE_IDENTIFIER = com.aynik.WatchGPT;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -443,7 +455,6 @@
 		};
 		AD7E7E69253D9F5D00E684A1 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 6E9CC2B929EECA7800D48F01 /* Secrets.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -451,14 +462,14 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 64U5F24Q5N;
+				DEVELOPMENT_TEAM = JC425FUS22;
 				INFOPLIST_FILE = "$(SRCROOT)/WatchGPTWatch/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = io.github.aynik.WatchGPT.watchkitapp;
+				PRODUCT_BUNDLE_IDENTIFIER = com.aynik.WatchGPT.watchkit;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
@@ -470,7 +481,6 @@
 		};
 		AD7E7E6A253D9F5D00E684A1 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 6E9CC2B929EECA7800D48F01 /* Secrets.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -478,14 +488,14 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 64U5F24Q5N;
+				DEVELOPMENT_TEAM = JC425FUS22;
 				INFOPLIST_FILE = "$(SRCROOT)/WatchGPTWatch/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = io.github.aynik.WatchGPT.watchkitapp;
+				PRODUCT_BUNDLE_IDENTIFIER = com.aynik.WatchGPT.watchkit;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
@@ -507,7 +517,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		6E3DED2129ECCF590088B64A /* Build configuration list for PBXNativeTarget "WatchGPT" */ = {
+		6E3DED2129ECCF590088B64A /* Build configuration list for PBXNativeTarget "WatchGPTPhone" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				6E3DED1F29ECCF590088B64A /* Debug */,

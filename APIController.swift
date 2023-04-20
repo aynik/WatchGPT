@@ -1,4 +1,5 @@
 import Foundation
+import SwiftUI
 
 struct Message {
   let role: String
@@ -10,13 +11,23 @@ extension Array where Element == Message {
 }
 
 class APIController: @unchecked Sendable {
+  @AppStorage("model") var model: String = "gpt-3.5-turbo"
+  @AppStorage("baseUrl") var baseUrl: String = ""
+  
   private var historyList = [Message]()
   private let urlSession = URLSession.shared
-  private let apiBaseUrl = Bundle.main.object(forInfoDictionaryKey: "ApiBaseUrl")!
   private var urlRequest: URLRequest {
+    var chatEndpoint = ""
+    var chatContinueEndpoint = ""
+    for gptModel in GptModel.allCases {
+      if gptModel.rawValue == model {
+        chatEndpoint = gptModel.chatEndpoint
+        chatContinueEndpoint = gptModel.chatContinueEndpoint
+      }
+    }
     let url = historyList.count > 0 ?
-    URL(string: "\(apiBaseUrl)/chat-continue") :
-    URL(string: "\(apiBaseUrl)/chat")
+    URL(string: "\(baseUrl)\(chatContinueEndpoint)") :
+    URL(string: "\(baseUrl)\(chatEndpoint)")
     var urlRequest = URLRequest(url: url!)
     urlRequest.httpMethod = "POST"
     return urlRequest

@@ -11,16 +11,20 @@ struct MessageRow: Identifiable, Codable {
   var responseError: String?
 }
 
+
 class ViewModel: ObservableObject {
-  @AppStorage("language") var language: String = "en-US"
-  @AppStorage("enableSpeech") var enableSpeech: Bool = true
+  @AppStorage("model") var model: String = "gpt-3.5-turbo"
+  @AppStorage("baseUrl") var baseUrl: String = ""
+  @AppStorage("listeningLanguage") var listeningLanguage: String = "en-US"
+  @AppStorage("enableSpeaking") var enableSpeaking: Bool = true
+  @AppStorage("speakingLanguage") var speakingLanguage: String = "en-US"
+  @Published var isSpeaking = false
   @Published var isInteractingWithChatGPT = false
   @Published var messages: [MessageRow] = []
   @Published var inputMessage: String = ""
   @Published var textInputForiOS: String = ""
   
-  private var synthesizer = AVSpeechSynthesizer()
-  private let api: APIController
+  let api: APIController
   
   init(api: APIController) {
     self.api = api
@@ -28,44 +32,14 @@ class ViewModel: ObservableObject {
   
   // Speech control methods
   func toggleSpeech() {
-    enableSpeech.toggle()
-  }
-  
-  private func speakText(_ text: String) {
-    if enableSpeech {
-      let utterance = AVSpeechUtterance(string: text)
-      utterance.voice = .init(language: language)
-      synthesizer.speak(utterance)
-    }
-  }
-  
-  func speakLastResponse() {
-    if enableSpeech {
-      guard let responseText = self.messages.last?.responseText, !responseText.isEmpty else {
-        return
-      }
-      stopSpeaking()
-      let utterance = AVSpeechUtterance(string: responseText)
-      utterance.voice = .init(language: language)
-      synthesizer.speak(utterance)
-    }
-  }
-  
-  func stopSpeaking() {
-    synthesizer.stopSpeaking(at: .immediate)
+    enableSpeaking.toggle()
   }
   
   // Message handling methods
   @MainActor
-  func sendTapped() async {
-    let text = inputMessage
-    inputMessage = ""
-    await send(text: text)
-  }
-  
-  @MainActor
   func clearMessages() {
-    stopSpeaking()
+    Synthesizer.shared.stopSpeaking()
+    isSpeaking = false
     api.deleteHistoryList()
     withAnimation { [weak self] in
       self?.messages = []
@@ -81,10 +55,10 @@ class ViewModel: ObservableObject {
     await send(text: message.sendText)
   }
   
-  // Private methods
   @MainActor
-  private func send(text: String) async {
+  func send(text: String) async {
     isInteractingWithChatGPT = true
+    isSpeaking = true
     var streamText = ""
     var sentenceBuffer = ""
     var messageRow = MessageRow(
@@ -110,13 +84,15 @@ class ViewModel: ObservableObject {
           sentenceBuffer = String(sentenceBuffer[periodIndex...].dropFirst())
           
           // Speak the completed sentence
-          speakText(String(sentence))
+          if enableSpeaking && isSpeaking {
+            Synthesizer.shared.speak(language: speakingLanguage, text: String(sentence))
+          }
         }
       }
       
       // Speak any remaining text in the buffer
-      if !sentenceBuffer.isEmpty {
-        speakText(sentenceBuffer)
+      if !sentenceBuffer.isEmpty && enableSpeaking && isSpeaking {
+        Synthesizer.shared.speak(language: speakingLanguage, text: sentenceBuffer)
       }
     } catch {
       messageRow.responseError = error.localizedDescription
@@ -125,6 +101,6 @@ class ViewModel: ObservableObject {
     messageRow.isInteractingWithChatGPT = false
     self.messages[self.messages.count - 1] = messageRow
     isInteractingWithChatGPT = false
+    isSpeaking = false
   }
-  
 }

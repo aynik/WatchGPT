@@ -1,12 +1,17 @@
 import SwiftUI
 
 struct MessageRowView: View {
+  @Environment(\.colorScheme) var colorScheme
+  @ObservedObject var vm: ViewModel
+  
   let message: MessageRow
   let retryCallback: (MessageRow) -> Void
   
   var body: some View {
     VStack(spacing: 0) {
+      Divider()
       sentMessageRow()
+      Divider()
       receivedMessageRow()
     }
   }
@@ -21,7 +26,7 @@ struct MessageRowView: View {
     if let text = message.responseText {
       return AnyView(messageRow(
         text: text,
-        bgColor: .black,
+        bgColor: colorScheme == .dark ? .black : .white,
         responseError: message.responseError,
         showDotLoading: message.isInteractingWithChatGPT
       ))
@@ -44,6 +49,7 @@ struct MessageRowView: View {
   private func messageText(text: String) -> some View {
     Text(text)
       .font(.body)
+      .foregroundColor(colorScheme == .dark ? .white : .black)
       .frame(maxWidth: .infinity, alignment: .leading)
       .padding()
       .contextMenu {
@@ -52,6 +58,11 @@ struct MessageRowView: View {
         }) {
           Text("Copy")
         }
+        Button(action: {
+          Synthesizer.shared.speak(language: vm.speakingLanguage, text: text)
+        }) {
+          Text("Speak")
+        }
       }
   }
   
@@ -59,8 +70,8 @@ struct MessageRowView: View {
   private func loadingIndicator(show: Bool) -> some View {
     if show {
       return AnyView(ProgressView()
-        .progressViewStyle(CircularProgressViewStyle(tint: .white))
-        .scaleEffect(0.7))
+        .progressViewStyle(CircularProgressViewStyle(tint: colorScheme == .dark ? .white : .black))
+        .padding(.bottom))
     } else {
       return AnyView(EmptyView())
     }
